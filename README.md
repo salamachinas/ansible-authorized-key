@@ -3,7 +3,7 @@ ansible-authorized-key
 
 This role manage authorized-key
 
-[![Ansible Galaxy](https://img.shields.io/ansible/role/xxxxx.svg)](https://galaxy.ansible.com/salamachinas/authorized-key/)
+[![Ansible Galaxy](https://img.shields.io/ansible/role/15817.svg)](https://galaxy.ansible.com/salamachinas/authorized-key/)
 
 Requirements
 ------------
