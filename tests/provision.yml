@@ -1,0 +1,10 @@
+---
+- hosts: all
+  roles:
+    - role: ansible-authorized-key
+  vars:
+      authorized:
+        - ansible
+      users:
+        name: ansible
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFObRVX4Oy7gPqNgQmDelr1xna5bsoFqXGiV0MWs5a3jwF3AlGMQfRnc5rDDfT+yNMFAvd/6ci/gpdZIh+WSPfd2zerGvdsn4zMCRoylKUG3Z3/f8sbZoUMNAbdt2kO9lvnb4eG5bRTsKnhh0k0KD+N2z0fqZfp2tCFYezBoALFP196AE5T6noEybLnpniXnu8ZNj9IKDhm8Efit520Y52xjFEdpfO7YxI3camo9CqY1jWUcSeGEYSmLiPFWE5Pq5fVVLoMDjA5CNJFVi0MHg9dZp4TMOcEX6wIrwpcryU8KrxYvwx/bXzmjOuYKigQpxPnJpVcQkSQwd0m3X61NoH ansible

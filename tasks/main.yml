@@ -1,0 +1,14 @@
+---
+- name: add users keys
+  with_items:
+    - "{{ users }}"
+  authorized_key: user={{ item.name }} state=present key={{ item.key }} exclusive=yes
+  no_log: true
+  when: item.key is defined and item.name in authorized
+
+- name: remove users keys
+  with_items:
+    - "{{ users }}"
+  authorized_key: user={{ item.name }} state=present key="" exclusive=yes
+  no_log: true
+  when: item.key is not defined and item.name in authorized

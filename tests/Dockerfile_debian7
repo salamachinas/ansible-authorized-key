@@ -1,0 +1,9 @@
+FROM williamyeh/ansible:debian7
+
+WORKDIR /tmp
+COPY  .  /tmp/ansible-authorized-key
+
+RUN echo 127.0.0.1 > inventory
+RUN adduser --disabled-password --gecos "" ansible
+
+RUN ansible-playbook -i inventory ansible-authorized-key/tests/provision.yml --connection=local --sudo
